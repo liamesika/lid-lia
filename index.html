@@ -20,16 +20,11 @@
       background-color: #003049;
       padding: 20px 40px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 100;
-    }
-
-    header img {
-      height: 55px;
-      filter: brightness(1.2);
     }
 
     nav a {
@@ -184,7 +179,6 @@
 </head>
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/liamesika/lid-lia/main/logo.png" alt="L.M Logo" />
     <nav>
       <a href="#basic">מסלול בסיס</a>
       <a href="#coaching">ליווי אישי</a>
@@ -194,7 +188,71 @@
 
   <div class="container">
     <h1>בוא נבנה את העסק שלך – עם מסלול שמתאים בדיוק לך 🚀</h1>
-    <!-- מסלולים (תוכן זהה כמו קודם, לא הוכנס כאן כדי לקצר) -->
+
+    <!-- מסלול בסיס -->
+    <div class="package" id="basic">
+      <h2>🥉 מסלול בסיס – DIY עם תמיכה</h2>
+      <div class="price">מחיר: 2,490 ₪ כולל מע”מ</div>
+      <ul>
+        <li>גישה מלאה לקורס מוקלט: איך לבנות חנות שופיפיי מאפס</li>
+        <li>שיעורים פרקטיים: בניית אתר, עיצוב, מוצרים, סליקה</li>
+        <li>תמיכה לשאלות בוואטסאפ – למשך 30 יום</li>
+        <li>תבנית דף בית מעוצבת (Framer / Shopify)</li>
+      </ul>
+      <div class="note">💬 אין קבוצות, אין מפגשי זום – רק את, הקורס ואני בוואטסאפ כשצריך.</div>
+      <form action="https://formspree.io/f/meogqaoz" method="POST">
+        <label>שם מלא:</label>
+        <input type="text" name="name" required>
+        <label>טלפון:</label>
+        <input type="text" name="phone" required>
+        <input type="hidden" name="מסלול" value="מסלול בסיס – DIY עם תמיכה">
+        <button type="submit">מעוניינת במסלול הזה</button>
+      </form>
+    </div>
+
+    <!-- מסלול ליווי אישי -->
+    <div class="package" id="coaching">
+      <h2>🥈 מסלול ליווי אישי – “החנות שלך עולה לאוויר”</h2>
+      <div class="price">מחיר: 3,900 ₪</div>
+      <ul>
+        <li>גישה מלאה לקורס</li>
+        <li>פגישה אישית בזום פעם בשבוע – למשך 3 שבועות</li>
+        <li>מענה אישי ושוטף בוואטסאפ</li>
+        <li>עזרה בבחירת נישה, שם, בידול וחוויית משתמש</li>
+        <li>בונוס: שיעור “מותג שמוכר רגש – לא מוצר”</li>
+      </ul>
+      <div class="note">💬 אין קבוצות, אין רעש – כל הפוקוס עלייך.</div>
+      <form action="https://formspree.io/f/meogqaoz" method="POST">
+        <label>שם מלא:</label>
+        <input type="text" name="name" required>
+        <label>טלפון:</label>
+        <input type="text" name="phone" required>
+        <input type="hidden" name="מסלול" value="מסלול ליווי אישי – החנות שלך עולה לאוויר">
+        <button type="submit">מעוניינת במסלול הזה</button>
+      </form>
+    </div>
+
+    <!-- מסלול פרימיום -->
+    <div class="package" id="premium">
+      <h2>🥇 מסלול פרימיום 1:1 – “בונים עסק, לא רק אתר”</h2>
+      <div class="price">מחיר: 6,900 ₪</div>
+      <ul>
+        <li>5 פגישות זום 1:1 בליווי צמוד</li>
+        <li>פיתוח מותג וחוויית לקוח מותאמת אישית</li>
+        <li>בניית חנות מקצועית עם עיצוב ייחודי</li>
+        <li>הגדרות טכניות: סליקה, משלוחים, דומיין, חוקים</li>
+        <li>ייעוץ שיווקי אישי – כתיבת תוכן, דף נחיתה, פרסום ראשוני</li>
+      </ul>
+      <div class="note">💬 זה לא רק אתר – זו התחלה של עסק חדש שאת גאה בו.</div>
+      <form action="https://formspree.io/f/meogqaoz" method="POST">
+        <label>שם מלא:</label>
+        <input type="text" name="name" required>
+        <label>טלפון:</label>
+        <input type="text" name="phone" required>
+        <input type="hidden" name="מסלול" value="מסלול פרימיום 1:1 – בונים עסק, לא רק אתר">
+        <button type="submit">מעוניינת במסלול הזה</button>
+      </form>
+    </div>
   </div>
 
   <div class="footer">
