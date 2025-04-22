@@ -4,95 +4,144 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>מסלולי שופיפיי</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #F8F8FF;
+      font-family: 'Assistant', sans-serif;
+      background-color: #f8f8ff;
       margin: 0;
       padding: 0;
       direction: rtl;
       color: #333;
       scroll-behavior: smooth;
     }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
+
     h1 {
-      margin-bottom: 30px;
-      font-size: 32px;
+      margin-bottom: 40px;
+      font-size: 36px;
+      text-align: center;
+      color: #222;
     }
+
     .package {
       background-color: #fff;
       padding: 25px;
       border-radius: 12px;
-      margin: 50px 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       opacity: 0;
       transform: translateY(50px);
       transition: all 0.6s ease-out;
     }
+
     .package.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .package h2 {
       margin-top: 0;
+      color: #111;
     }
+
     .price {
       font-size: 18px;
-      color: #555;
+      color: #666;
       margin-bottom: 15px;
     }
+
     ul {
       padding-right: 20px;
       text-align: right;
     }
+
     ul li {
       margin-bottom: 8px;
+      line-height: 1.6;
     }
+
     .note {
       font-style: italic;
       color: #777;
       margin-top: 10px;
     }
+
     form {
       margin-top: 20px;
       background: #f1f1f1;
       padding: 15px;
       border-radius: 8px;
     }
+
     input[type="text"], input[type="email"] {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-family: inherit;
     }
+
     button {
       background-color: #38b000;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
-      text-align: center;
     }
+
     button:hover {
       background-color: #2d8600;
     }
+
     .footer {
       text-align: center;
       padding: 40px 20px;
       background-color: #f6f6f6;
       border-top: 1px solid #e0e0e0;
     }
+
     .footer .logo {
-      max-width: 140px;
+      max-width: 120px;
       margin-bottom: 20px;
     }
+
     .contact-btn {
       margin-top: 15px;
       background-color: #25D366;
@@ -103,14 +152,17 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     .contact-btn:hover {
       background-color: #1ebe5b;
     }
+
     .slogan {
       margin-top: 25px;
       font-size: 18px;
       color: #333;
     }
+
     .website-link {
       font-size: 18px;
       font-weight: bold;
@@ -119,9 +171,11 @@
       display: inline-block;
       margin-top: 10px;
     }
+
     .website-link:hover {
       text-decoration: underline;
     }
+
     a {
       color: #0077b6;
       text-decoration: none;
@@ -129,11 +183,22 @@
   </style>
 </head>
 <body>
+
+  <!-- Header -->
+  <header>
+    <img src="https://raw.githubusercontent.com/liamesika/lid-lia/main/logo.png" alt="L.M Logo" />
+    <nav>
+      <a href="#basic">מסלול בסיס</a>
+      <a href="#coaching">ליווי אישי</a>
+      <a href="#premium">פרימיום</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <h1> בוא נבנה את העסק שלך – עם מסלול שמתאים בדיוק לך🚀</h1>
+    <h1>בוא נבנה את העסק שלך – עם מסלול שמתאים בדיוק לך 🚀</h1>
 
     <!-- מסלול בסיס -->
-    <div class="package">
+    <div class="package" id="basic">
       <h2>🥉 מסלול בסיס – DIY עם תמיכה</h2>
       <div class="price">מחיר: 2,490 ₪ כולל מע”מ</div>
       <ul>
@@ -153,8 +218,8 @@
       </form>
     </div>
 
-    <!-- מסלול אישי -->
-    <div class="package">
+    <!-- מסלול ליווי אישי -->
+    <div class="package" id="coaching">
       <h2>🥈 מסלול ליווי אישי – “החנות שלך עולה לאוויר”</h2>
       <div class="price">מחיר: 3,900 ₪</div>
       <ul>
@@ -176,7 +241,7 @@
     </div>
 
     <!-- מסלול פרימיום -->
-    <div class="package">
+    <div class="package" id="premium">
       <h2>🥇 מסלול פרימיום 1:1 – “בונים עסק, לא רק אתר”</h2>
       <div class="price">מחיר: 6,900 ₪</div>
       <ul>
@@ -196,30 +261,30 @@
         <button type="submit">מעוניינת במסלול הזה</button>
       </form>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <div class="footer">
+  <!-- Footer -->
+  <div class="footer">
     <img class="logo" src="https://raw.githubusercontent.com/liamesika/lid-lia/main/logo.png" alt="L.M Logo">
-      <div>
-        <a href="https://liamesika.vercel.app" target="_blank" class="website-link">
-          🔗 בקרו באתר שלי
-        </a>
-      </div>
-      <div>
-        <a href="https://wa.me/972587878676" target="_blank">
-          <button class="contact-btn">
-            📲 צרו קשר
-          </button>
-        </a>
-      </div>
-      <div class="slogan">
-        בחרו את הדרך שמתאימה לכם 💙
-      </div>
+    <div>
+      <a href="https://liamesika.vercel.app" target="_blank" class="website-link">
+        🔗 בקרו באתר שלי
+      </a>
+    </div>
+    <div>
+      <a href="https://wa.me/972587878676" target="_blank">
+        <button class="contact-btn">
+          📲 צרו קשר
+        </button>
+      </a>
+    </div>
+    <div class="slogan">
+      בחרו את הדרך שמתאימה לכם 💙
     </div>
   </div>
 
+  <!-- גלילה חלקה -->
   <script>
-    // אנימציה לגלילה
     const packages = document.querySelectorAll('.package');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
