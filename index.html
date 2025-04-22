@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>מסלולי שופיפיי</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F8F8FF;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .package {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 50px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+    .package.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .package h2 {
+      margin-top: 0;
+    }
+    .price {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-right: 20px;
+      text-align: right;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .note {
+      font-style: italic;
+      color: #777;
+      margin-top: 10px;
+    }
+    form {
+      margin-top: 20px;
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #38b000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: center;
+    }
+    button:hover {
+      background-color: #2d8600;
+    }
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f6f6f6;
+      border-top: 1px solid #e0e0e0;
+    }
+    .footer .logo {
+      max-width: 140px;
+      margin-bottom: 20px;
+    }
+    .contact-btn {
+      margin-top: 15px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .contact-btn:hover {
+      background-color: #1ebe5b;
+    }
+    .slogan {
+      margin-top: 25px;
+      font-size: 18px;
+      color: #333;
+    }
+    .website-link {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0056b3;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .website-link:hover {
+      text-decoration: underline;
+    }
+    a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> בוא נבנה את העסק שלך – עם מסלול שמתאים בדיוק לך🚀</h1>
+
+    <!-- מסלול בסיס -->
+    <div class="package">
+      <h2>🥉 מסלול בסיס – DIY עם תמיכה</h2>
+      <div class="price">מחיר: 2,490 ₪ כולל מע”מ</div>
+      <ul>
+        <li>גישה מלאה לקורס מוקלט: איך לבנות חנות שופיפיי מאפס</li>
+        <li>שיעורים פרקטיים: בניית אתר, עיצוב, מוצרים, סליקה</li>
+        <li>תמיכה לשאלות בוואטסאפ – למשך 30 יום</li>
+        <li>תבנית דף בית מעוצבת (Framer / Shopify)</li>
+      </ul>
+      <div class="note">💬 אין קבוצות, אין מפגשי זום – רק את, הקורס ואני בוואטסאפ כשצריך.</div>
+      <form action="https://formspree.io/f/meogqaoz" method="POST">
+        <label>שם מלא:</label>
+        <input type="text" name="name" required>
+        <label>טלפון:</label>
+        <input type="text" name="phone" required>
+        <input type="hidden" name="מסלול" value="מסלול בסיס – DIY עם תמיכה">
+        <button type="submit">מעוניינת במסלול הזה</button>
+      </form>
+    </div>
+
+    <!-- מסלול אישי -->
+    <div class="package">
+      <h2>🥈 מסלול ליווי אישי – “החנות שלך עולה לאוויר”</h2>
+      <div class="price">מחיר: 3,900 ₪</div>
+      <ul>
+        <li>גישה מלאה לקורס</li>
+        <li>פגישה אישית בזום פעם בשבוע – למשך 3 שבועות</li>
+        <li>מענה אישי ושוטף בוואטסאפ</li>
+        <li>עזרה בבחירת נישה, שם, בידול וחוויית משתמש</li>
+        <li>בונוס: שיעור “מותג שמוכר רגש – לא מוצר”</li>
+      </ul>
+      <div class="note">💬 אין קבוצות, אין רעש – כל הפוקוס עלייך.</div>
+      <form action="https://formspree.io/f/meogqaoz" method="POST">
+        <label>שם מלא:</label>
+        <input type="text" name="name" required>
+        <label>טלפון:</label>
+        <input type="text" name="phone" required>
+        <input type="hidden" name="מסלול" value="מסלול ליווי אישי – החנות שלך עולה לאוויר">
+        <button type="submit">מעוניינת במסלול הזה</button>
+      </form>
+    </div>
+
+    <!-- מסלול פרימיום -->
+    <div class="package">
+      <h2>🥇 מסלול פרימיום 1:1 – “בונים עסק, לא רק אתר”</h2>
+      <div class="price">מחיר: 6,900 ₪</div>
+      <ul>
+        <li>5 פגישות זום 1:1 בליווי צמוד</li>
+        <li>פיתוח מותג וחוויית לקוח מותאמת אישית</li>
+        <li>בניית חנות מקצועית עם עיצוב ייחודי</li>
+        <li>הגדרות טכניות: סליקה, משלוחים, דומיין, חוקים</li>
+        <li>ייעוץ שיווקי אישי – כתיבת תוכן, דף נחיתה, פרסום ראשוני</li>
+      </ul>
+      <div class="note">💬 זה לא רק אתר – זו התחלה של עסק חדש שאת גאה בו.</div>
+      <form action="https://formspree.io/f/meogqaoz" method="POST">
+        <label>שם מלא:</label>
+        <input type="text" name="name" required>
+        <label>טלפון:</label>
+        <input type="text" name="phone" required>
+        <input type="hidden" name="מסלול" value="מסלול פרימיום 1:1 – בונים עסק, לא רק אתר">
+        <button type="submit">מעוניינת במסלול הזה</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <img class="logo" src="https://yourdomain.com/path-to-logo.png" alt="L.M Logo" />
+      <div>
+        <a href="https://liamesika.vercel.app" target="_blank" class="website-link">
+          🔗 בקרו באתר שלי
+        </a>
+      </div>
+      <div>
+        <a href="https://wa.me/972587878676" target="_blank">
+          <button class="contact-btn">
+            📲 צרו קשר
+          </button>
+        </a>
+      </div>
+      <div class="slogan">
+        בחרו את הדרך שמתאימה לכם 💙
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // אנימציה לגלילה
+    const packages = document.querySelectorAll('.package');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    packages.forEach(pkg => observer.observe(pkg));
+  </script>
+</body>
+</html>
